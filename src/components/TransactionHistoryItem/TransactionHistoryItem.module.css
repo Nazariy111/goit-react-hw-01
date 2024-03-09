@@ -1,0 +1,22 @@
+
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+   
+}
+
+tr:nth-child(odd) {
+    background-color: #cccccc;
+}
+
+td {
+    font-weight: 500;
+    color: black;
+}
+
+.itemType::first-letter {
+    text-transform: uppercase;
+}

@@ -1,17 +1,25 @@
 import React from 'react';
 import css from './FriendListItem.module.css';
 
-const FriendListItem = ({avatar, name, isOnline}) => {
+const FriendListItem = ({ friend }) => {
+  const classes = [css.friendStatus];
+
+  if (friend.isOnline) { 
+    classes.push(css.isOnline);
+  } else { 
+    classes.push(css.isOffline);
+  };
+
   return (
-      <div>
-          <li>
-              <img src={avatar} alt="Avatar" width="48" />
-              <p>{name}</p>
-              <p>Friend status</p>
-          </li>
+    <>
+      <li className={css.friendListItem}>
+        <img className={css.friendAvatar} src={friend.avatar} alt="Avatar" width="48" />
+        <p className={css.friendName}>{friend.name}</p>
+        <p className={classes.join(' ')}>{friend.isOnline ? 'Online' : 'Offline'}</p>
+      </li>
           
-    </div>
+    </>
   )
 }
 
-export default FriendListItem
+export default FriendListItem;

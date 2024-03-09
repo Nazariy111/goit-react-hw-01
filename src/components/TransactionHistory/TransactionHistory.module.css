@@ -1,0 +1,11 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th {
+    color: white;
+    background-color: rgb(57, 56, 56);
+    
+}
